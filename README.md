@@ -15,7 +15,7 @@ _A comprehensive monitoring system for tracking fire incidents across cities and
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/FireApp.git
+   git clone https://github.com/Ronelvincentloquillano/FireApp.git
    cd FireApp
 
 ### Set Up Virtual Environment (Recommended)
