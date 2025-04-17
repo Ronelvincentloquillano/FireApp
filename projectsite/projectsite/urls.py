@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 
 from fire.views import HomePageView, ChartView, PieCountbySeverity, LineCountbyMonth, MultilineIncidentTop3Country, multipleBarbySeverity, map_station, fire_incident_map
 from fire.views import firestationListView, firestationCreateView, firestationUpdateView, firestationDeleteView
@@ -8,6 +9,7 @@ from fire.views import LocationListView, LocationCreateView, LocationUpdateView,
 from fire.views import ConditionListView, ConditionCreateView, ConditionUpdateView, ConditionDeleteView
 from fire.views import FiretruckListView, FiretruckCreateView, FiretruckUpdateView, FiretruckDeleteView
 from fire.views import FirefightersListView, FirefightersCreateView, FirefightersUpdateView, FirefightersDeleteView
+from fire.views import BoatListView, BoatCreateView, BoatUpdateView
 
 
 urlpatterns = [
@@ -52,6 +54,11 @@ urlpatterns = [
     path('firefighters/add/', FirefightersCreateView.as_view(), name='firefighters-add'),
     path('firefighters/<int:pk>/edit/', FirefightersUpdateView.as_view(), name='firefighters-update'),  
     path('firefighters/<int:pk>/delete/', FirefightersDeleteView.as_view(), name='firefighters-delete'),
+
+     # Boat URLs
+    path('boats/', BoatListView.as_view(), name='boat_list'),
+    path('boat/create/', BoatCreateView.as_view(), name='boat_add'),
+    path('boat/<int:pk>/update/', BoatUpdateView.as_view(), name='boat_update'),
 
 
 ]
